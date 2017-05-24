@@ -1,2 +1,2 @@
 var dddddd = () => 34;
-console.log(dddddd())
+console.log(dddddd());
