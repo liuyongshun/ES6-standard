@@ -1,13 +1,17 @@
 'use strict';
-var path = require('path');
-var outputPath = path.resolve(__dirname, './dist');
-var excludeNodeModule = path.resolve(__dirname, './node_modules');
+const path = require('path');
+const outputPath = path.resolve(__dirname, './dist');
+const excludeNodeModule = path.resolve(__dirname, './node_modules');
+const ES6Path = path.resolve(__dirname, './ES6');
 
 module.exports = {
-  entry: './main.js',
+  entry: {
+    main: './main.js',
+    literal: ES6Path + '/literal.js'
+  },
   output: {
     path: outputPath, // The path must be absolute path.
-    filename: 'bundle.js'
+    filename: '[name].js'
   },
   module: {
     rules: [
@@ -29,6 +33,17 @@ module.exports = {
               formatter: require('eslint-friendly-formatter'),  // if the formatter is not accord with eslint,it will throw error;
               emitError: true
             }
+          }
+        ]
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'stylus-loader'
           }
         ]
       }
