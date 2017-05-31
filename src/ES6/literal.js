@@ -1,12 +1,14 @@
+// The identifier of search @@@@literal
+
 // 快级作用域变量和普通变量let & var
 
 // 问题1：
-// let numChunkScope = 5;
-// for (let i = 0; i < 10; i++) {}
+let numChunkScope = 5;
+for (let i = 0; i < 10; i++) {}
 // console.log(i); // not defined
-// var num = 2;
-// for (var i = 0; i < 10; i++) {}
-// console.log(i); // 10
+var num = 2;
+for (var i = 0; i < 10; i++) {}
+console.log(i); // 10
 
 // 问题2：
 // let arrByES6 = [];
@@ -36,13 +38,13 @@
 // }
 
 // 常量（不可更改）
-// const NUM_STABLE = 1;
+const NUM_STABLE = 1;
 
 /** first:
- * export method multiple variable export and import is the same as the export
+ * The export method of multiple variable export ，and import is the same as the export
  */
-// export {
-//   numChunkScope,
-//   num,
-//   NUM_STABLE
-// };
+export {
+  numChunkScope,
+  num,
+  NUM_STABLE
+};

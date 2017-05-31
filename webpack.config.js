@@ -2,12 +2,13 @@
 const path = require('path');
 const outputPath = path.resolve(__dirname, './dist');
 const excludeNodeModule = path.resolve(__dirname, './node_modules');
-const ES6Path = path.resolve(__dirname, './ES6');
+const commonPath = path.resolve(__dirname, './src');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: './main.js',
-    literal: ES6Path + '/literal.js'
+    main: commonPath + '/main.js',
+    literal: commonPath + '/ES6/literal.js'
   },
   output: {
     path: outputPath, // The path must be absolute path.
@@ -37,16 +38,28 @@ module.exports = {
         ]
       },
       {
-        test: /\.css$/,
+        test: /\.styl$/,
         use: [
-          {
-            loader: 'css-loader'
-          },
+          'style-loader',
+          'css-loader',
           {
             loader: 'stylus-loader'
           }
         ]
+        // use: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: ['css-loader', 'stylus-loader']
+        // })
+      },
+      {
+        test: /\.css$/,
+        use: ExtractTextPlugin.extract({
+          use: ['css-loader']
+        })
       }
     ]
-  }
+  },
+  plugins: [
+    new ExtractTextPlugin('./css/index.css')
+  ]
 };
