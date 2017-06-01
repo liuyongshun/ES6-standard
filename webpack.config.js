@@ -11,7 +11,7 @@ module.exports = {
     literal: commonPath + '/ES6/literal.js'
   },
   output: {
-    path: outputPath, // The path must be absolute path.
+    path: outputPath, // The 'path' must be absolute.
     filename: '[name].js'
   },
   module: {
@@ -54,5 +54,10 @@ module.exports = {
   },
   plugins: [
     new ExtractTextPlugin('./css/index.css')  // The split 'CSS' will be added to 'index.css'
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: false,
+    port: 9000
+  }
 };
