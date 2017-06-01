@@ -31,31 +31,28 @@ module.exports = {
           {
             loader: 'eslint-loader',
             options: {
-              formatter: require('eslint-friendly-formatter'),  // if the formatter is not accord with eslint,it will throw error;
-              emitError: true
+              formatter: require('eslint-friendly-formatter'),  // if the format is not accord with eslint standard,it will throw error;
+              emitError: true // Determine whether emit a mistake
             }
           }
         ]
       },
       {
-        test: /\.styl$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          {
-            loader: 'stylus-loader'
-          }
-        ]
+        test: /\.styl$/,  // compile 'stylus' into 'css'
+        use: ExtractTextPlugin.extract({   // separate css that was compiled
+          fallback: 'style-loader',
+          use: ['css-loader', 'stylus-loader']
+        })
       },
       {
-        test: /\.css$/,
-        use: ExtractTextPlugin.extract({
+        test: /\.css$/,  // handle css
+        use: ExtractTextPlugin.extract({  // separate css
           use: ['css-loader']
         })
       }
     ]
   },
   plugins: [
-    new ExtractTextPlugin('./css/index.css')
+    new ExtractTextPlugin('./css/index.css')  // The split 'CSS' will be added to 'index.css'
   ]
 };
