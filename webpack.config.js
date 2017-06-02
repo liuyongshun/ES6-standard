@@ -53,11 +53,6 @@ module.exports = {
     ]
   },
   plugins: [
-    new ExtractTextPlugin('./css/index.css')  // The split 'CSS' will be added to 'index.css'
-  ],
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    compress: false,
-    port: 9000
-  }
+    new ExtractTextPlugin('./css/[name].css')  // The split 'CSS' will be added to 'index.css'
+  ]
 };
