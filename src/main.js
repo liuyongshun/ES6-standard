@@ -2,9 +2,10 @@
 import * as pub from './ES6/literal';
 import './css/index.styl';
 import './css/indexdd.css';
-console.log(pub.numChunkScope);
-console.log(pub.NUM_STABLE);
-console.log(pub.num);
+// console.log(pub.numChunkScope);
+// console.log(pub.NUM_STABLE);
+// console.log(pub.num);
+console.log(pub);
 
 // second: import method
 // import { numChunkScope, NUM_STABLE, num } from './ES6/literal';

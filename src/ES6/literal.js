@@ -37,6 +37,19 @@ console.log(i); // 10
 //   console.log(tmp);
 // }
 
+// 参数x默认值等于另一个参数y，而此时y还没有声明，属于 ” 死区 “，所以报错
+// function bar (x = y, y = 2) {
+//   return [x, y];
+// }
+// bar();
+
+// 问题4：
+// 不允许重复声明变量,而且let声明的不属于window
+// function () {
+//   let a = 10;
+//   var a = 1;
+// }
+
 // 常量（不可更改）
 const NUM_STABLE = 1;
 

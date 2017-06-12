@@ -7,8 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: commonPath + '/main.js',
-    literal: commonPath + '/ES6/literal.js'
+    main: ['babel-polyfill', commonPath + '/main.js']
   },
   output: {
     path: outputPath, // The 'path' must be absolute.
