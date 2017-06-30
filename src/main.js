@@ -1,6 +1,7 @@
 // first: import method
 // import * as pub from './ES6/literal';
 import './ES6/literal';
+import './ES6/string';
 import './css/index.styl';
 import './css/indexdd.css';
 // console.log(pub.numChunkScope);

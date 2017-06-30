@@ -121,23 +121,64 @@
 
 // 三、变量解构用途
 // 1、变量交换
-let x = 3;
-let y = 5;
-let judge = true;
-if (judge) {
-  [x, y] = [y, x];
-  console.log(x, y);
-}
+// let x = 3;
+// let y = 5;
+// let judge = true;
+// if (judge) {
+//   [x, y] = [y, x];
+//   console.log(x, y);
+// }
 
-// 2、函数返回多个值
-function example () {
-  return [1, 2, 3];
-}
-var [a, b, c] = example();
-console.log(a, b, c);
+// // 2、函数返回多个值
+// function example () {
+//   return [1, 2, 3];
+// }
+// var [a, b, c] = example();
+// console.log(a, b, c);
 
+// // 3、作为函数参数
+// function foo ({a, b, c}) {
+//   console.log(a, b, c);
+// }
+// foo({a: 3, b: 2, c: 8});
+
+// 4、提取json
+// var jsonData = {
+//   id: "42",
+//   status: "OK",
+//   data: [867, 5309]
+// };
+// let { id, status, data: number } = jsonData;
 // export {
 //   numChunkScope,
 //   num,
 //   NUM_STABLE
 // };
+
+// 5.遍历 Map 结构
+// var map = new Map();
+// map.set('first', 'hello');
+// map.set('second', 'world');
+// for (let [key, value] of map) {
+//   console.log(key + ' is ' + value);
+// }
+// for (let [, value] of map) {
+//   console.log(value);
+// }
+// for (let [key] of map) {
+//   console.log(key);
+// }
+// const arr = ['apple', 'pen', 'apple-pen'];
+// console.log(arr.map(word => word[0].toUpperCase() + word.slice(1)));
+
+// function upperFirst (word) {
+//   // console.log(word);
+//   console.log(word.slice(1));
+//   return word[0].toUpperCase() + word.slice(1);
+// }
+
+// function wordToUpperCase (arr) {
+//   return arr.map(upperFirst);
+// }
+
+// console.log(wordToUpperCase(['apple', 'pen', 'apple-pen']));
