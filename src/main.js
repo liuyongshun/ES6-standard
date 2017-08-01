@@ -3,6 +3,7 @@
 import './ES6/literal';
 import './ES6/string';
 import './ES6/array';
+import './ES6/function';
 import './css/index.styl';
 import './css/indexdd.css';
 // console.log(pub.numChunkScope);

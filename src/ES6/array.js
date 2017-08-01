@@ -18,6 +18,6 @@ console.log(arr2);
 
 //
 let ps = document.querySelectorAll('p');
-  Array.from(ps).forEach(function (p) {
+Array.from(ps).forEach(function (p) {
   console.log(p);
 });
