@@ -3,7 +3,9 @@ const path = require('path');
 const outputPath = path.resolve(__dirname, './dist');
 const excludeNodeModule = path.resolve(__dirname, './node_modules');
 const commonPath = path.resolve(__dirname, './src');
+// const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+// const WebpackDevServer = require("webpack-dev-server");
 
 module.exports = {
   entry: {
@@ -11,6 +13,7 @@ module.exports = {
   },
   output: {
     path: outputPath, // The 'path' must be absolute.
+    publicPath: 'http://localhost:8088/dist/',
     filename: '[name].js'
   },
   module: {
@@ -51,7 +54,21 @@ module.exports = {
       }
     ]
   },
+  devServer: {
+ // 以public为根目录提供文件
+    historyApiFallback: true,
+    contentBase: './',
+    quiet: false, // 控制台中不输出打包的信息
+    noInfo: false,
+    hot: true,
+    inline: true,
+    lazy: false,
+    watchOptions: {
+      aggregateTimeout: 300
+    },
+    port: '8088'
+  },
   plugins: [
-    new ExtractTextPlugin('./css/[name].css')  // The split 'CSS' will be added to 'index.css'
+    new ExtractTextPlugin('./[name].css')  // The split 'CSS' will be added to 'index.css'
   ]
 };

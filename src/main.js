@@ -2,10 +2,10 @@
 // import * as pub from './ES6/literal';
 import './ES6/literal';
 import './ES6/string';
-import './ES6/array';
-import './ES6/function';
+// import './ES6/array';
+// import './ES6/function';
 import './css/index.styl';
-import './css/indexdd.css';
+// import './css/indexdd.css';
 // console.log(pub.numChunkScope);
 // console.log(pub.NUM_STABLE);
 // console.log(pub.num);
