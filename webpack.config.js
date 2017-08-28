@@ -2,18 +2,18 @@
 const path = require('path');
 const outputPath = path.resolve(__dirname, './dist');
 const excludeNodeModule = path.resolve(__dirname, './node_modules');
-const commonPath = path.resolve(__dirname, './src');
-// const webpack = require('webpack');
+// const commonPath = path.resolve(__dirname, './src');
+const webpack = require('webpack');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const WebpackDevServer = require("webpack-dev-server");
 
 module.exports = {
   entry: {
-    main: ['babel-polyfill', commonPath + '/main.js']
+    main: ['./src/main.js']
   },
   output: {
     path: outputPath, // The 'path' must be absolute.
-    publicPath: 'http://localhost:8088/dist/',
+    publicPath: '/',
     filename: '[name].js'
   },
   module: {
@@ -56,19 +56,19 @@ module.exports = {
   },
   devServer: {
  // 以public为根目录提供文件
-    historyApiFallback: true,
     contentBase: './',
-    quiet: false, // 控制台中不输出打包的信息
-    noInfo: false,
-    hot: true,
+    historyApiFallback: true,
+    // hot: true,
     inline: true,
-    lazy: false,
-    watchOptions: {
-      aggregateTimeout: 300
-    },
-    port: '8088'
+    port: '8888'
   },
   plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'index.html',
+      template: 'index.html',
+      inject: true
+    }),
     new ExtractTextPlugin('./[name].css')  // The split 'CSS' will be added to 'index.css'
   ]
 };
