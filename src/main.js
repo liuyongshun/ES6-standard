@@ -1,6 +1,6 @@
 // first: import method
 // import * as pub from './ES6/literal';
-import './ES6/literal';
+// import './ES6/literal';
 // import './ES6/string';
 // import './ES6/array';
 // import './ES6/exports';
@@ -17,4 +17,7 @@ import './ES6/literal';
 // console.log(numChunkScope);
 // console.log(NUM_STABLE);
 // console.log(num);
-console.log(1, 690);
+// console.log(1, 690);
+
+  var zzz = '3333';
+  document.getElementById('result').appendChild(`<b>${zzz}</b>`);
