@@ -5,7 +5,6 @@ var firstName = 'Michael';
 var lastName = 'Jackson';
 var year = 1958;
 export {firstName, lastName, year};
-
 // method-3
 // export function multiply (x, y) {
 //   return x * y;
@@ -47,8 +46,6 @@ export {firstName, lastName, year};
 // export default function () {
 //   console.log('foo');
 // }
-
-
 // // export default命令用在非匿名函数前，也是可以的。foo函数的函数名foo，在模块外部是无效的
 // export default function foo () {
 //   console.log('foo');
@@ -60,7 +57,6 @@ export {firstName, lastName, year};
 // export default foo;
 
 // 1. export default命令指定模块的默认输出。一个模块只能有一个默认输出，因此只能使用一次。import命令后面
-//才不用加大括号，因为只可能对应一个方法。
-//2. 本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。
-//3. 正是因为export default命令其实只是输出一个叫做default的变量，所以它后面不能跟变量声明语句。
-
+// 才不用加大括号，因为只可能对应一个方法。
+// 2. 本质上，export default就是输出一个叫做default的变量或方法，然后系统允许你为它取任意名字。
+// 3. 正是因为export default命令其实只是输出一个叫做default的变量，所以它后面不能跟变量声明语句。
