@@ -3,9 +3,9 @@
 // import './ES6/literal';
 // import './ES6/string';
 // import './ES6/array';
-import {firstName, lastName, year} from './ES6/exports';
+// import {firstName, lastName, year} from './ES6/exports';
 // import './ES6/function';
-// import './css/index.styl';
+import './css/index.styl';
 // import './css/indexdd.css';
 // console.log(pub.numChunkScope);
 // console.log(pub.NUM_STABLE);
@@ -21,7 +21,7 @@ import {firstName, lastName, year} from './ES6/exports';
 
   // var zzz = '3333';
   // document.getElementById('result').appendChild(`<b>${zzz}</b>`);
-console.log(firstName, lastName, year);
+// console.log(firstName, lastName, year);
 function f (x, y = 1, ...arg) {
   console.log(arguments.length);
   return [x, y];

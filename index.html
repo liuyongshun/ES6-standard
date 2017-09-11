@@ -2,16 +2,16 @@
 <html lang="zh-CN">
   <head>
     <meta charset="UTF-8"/>
-    <title>Document</title>
-    <!-- <script src="http://localhost:8888/webpack-dev-server.js"></script> -->
-
+    <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+  <img src="src/img/zz.png">
+  <%= htmlWebpackPlugin.options.date %>
+  <% for (var key in htmlWebpackPlugin.files) { %>
+  <%= key %> : <%= JSON.stringify(htmlWebpackPlugin.files[key]) %>
+  <% } %>
   <div id="result"></div>
-  <!-- <img src="dist/constructor.png" alt=""> -->
-etfhjghfgdfsdfghjklersgthjhk
-  <!-- <script type="text/javascript" src="/main.js"></script> -->
-
+  <!-- 绝对路径没问题，但是相对路径会有问题 -->
 </body>
 </html>
 

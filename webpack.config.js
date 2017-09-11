@@ -9,12 +9,13 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: {
-    main: ['./src/main.js']
+    main: './src/main.js'
+    // ccc: './src/main2.js'
   },
   output: {
     path: outputPath, // The 'path' must be absolute.
-    publicPath: '/',
-    filename: '[name].js'
+    // publicPath: './',
+    filename: '[name]-[hash].js'
   },
   module: {
     rules: [
@@ -51,24 +52,47 @@ module.exports = {
         use: ExtractTextPlugin.extract({  // separate css
           use: ['css-loader']
         })
+      },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader"
+          }
+        ]
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000,
+              name: '[name].[hash:7].[ext]'
+            }
+          }
+        ]
       }
     ]
   },
-  devServer: {
- // 以public为根目录提供文件
-    contentBase: './',
-    historyApiFallback: true,
-    // hot: true,
-    inline: true,
-    port: '8888'
-  },
+ //  devServer: {
+ // // 以public为根目录提供文件
+ //    contentBase: './',
+ //    historyApiFallback: true,
+ //    // hot: true,
+ //    inline: true,
+ //    port: '8888'
+ //  },
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'index.html',
-      inject: true
+      inject: true,
+      title: 'ddddddddddddddd',
+      date: new Date()
     }),
+
     new ExtractTextPlugin('./[name].css')  // The split 'CSS' will be added to 'index.css'
   ]
 };
