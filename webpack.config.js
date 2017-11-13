@@ -75,6 +75,9 @@ module.exports = {
       }
     ]
   },
+  postcss: [
+    require('autoprefixer')
+  ],
  //  devServer: {
  // // 以public为根目录提供文件
  //    contentBase: './',
@@ -92,7 +95,7 @@ module.exports = {
       title: 'ddddddddddddddd',
       date: new Date()
     }),
-
+    new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('./[name].css')  // The split 'CSS' will be added to 'index.css'
   ]
 };

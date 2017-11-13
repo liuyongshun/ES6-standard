@@ -1,6 +1,6 @@
-// var express = require('express');
-// var app = express();
-// var port = process.env.PORT || 3000;
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 3000;
 // var mongoose = require('mongoose');
 // var MongoClient = require('mongodb').MongoClient;
 // var DB_URL = 'mongodb://liu:0902@127.0.0.1:27017/es6';
@@ -72,11 +72,8 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('mongoose opened!');
   var userSchema = new mongoose.Schema({
-      name: {
-        type: String,
-        unique: true
-      },
-      password: String
+      name: String,
+      url: String
     });
   var User = mongoose.model('es6', userSchema);
 
@@ -85,12 +82,21 @@ db.once('open', function () {
   //   else console.log(doc.name + ", password - " + doc.password);
   // });
 
-  var lisi = new User({
-    name: 'LiSi',
-    password: '123456'
+  // var lisi = new User({
+  //   name: 'LiSi',
+  //   password: '123456'
+  // });
+  // lisi.save(function (err, doc) {
+  //   if (err) console.log(err);
+  //   else console.log(doc.name + 'saved');
+  // });
+  app.get('/', function (req, res) {
+    User.find('liu', function (err, task) {
+      if (err)
+        res.send(err);
+      res.json(task);
+    });
   });
-  lisi.save(function (err, doc) {
-    if (err) console.log(err);
-    else console.log(doc.name + 'saved');
-  });
+
 });
+app.listen(port);
