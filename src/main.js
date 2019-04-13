@@ -4,6 +4,7 @@
 // import './ES6/string';
 // import './ES6/array';
 // import {firstName, lastName, year} from './ES6/exports';
+import aa from './ES6/exports';
 // import './ES6/function';
 import './css/index.styl';
 // import './css/indexdd.css';
@@ -18,7 +19,7 @@ import './css/index.styl';
 // console.log(NUM_STABLE);
 // console.log(num);
 // console.log(1, 690);
-
+aa();
   // var zzz = '3333';
   // document.getElementById('result').appendChild(`<b>${zzz}</b>`);
 // console.log(firstName, lastName, year);

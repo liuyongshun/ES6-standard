@@ -75,9 +75,9 @@ module.exports = {
       }
     ]
   },
-  postcss: [
-    require('autoprefixer')
-  ],
+  // postcss: [
+  //   require('autoprefixer')
+  // ],
  //  devServer: {
  // // 以public为根目录提供文件
  //    contentBase: './',

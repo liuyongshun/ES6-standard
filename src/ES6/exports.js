@@ -1,10 +1,15 @@
+export default function aa () {
+  setTimeout(_ => {
+    console.log(333);
+  }, 5000);
+}
 // method-1
 // export var year = 1958;
 // method-2
-var firstName = 'Michael';
-var lastName = 'Jackson';
-var year = 1958;
-export {firstName, lastName, year};
+// var firstName = 'Michael';
+// var lastName = 'Jackson';
+// var year = 1958;
+// export {firstName, lastName, year};
 // method-3
 // export function multiply (x, y) {
 //   return x * y;

@@ -1,21 +1,24 @@
+
+import aa from './exports.js'
+aa()
 // import命令具有提升效果，会提升到整个模块的头部，首先执行。
-foo();
-import { foo } from 'my_module';
+// foo();
+// import { foo } from 'my_module';
 
-//
-import defaultMember from "module-name";
+// //
+// import defaultMember from "module-name";
 
-// 整体加载
-import * as name from "module-name";
+// // 整体加载
+// import * as name from "module-name";
 
 
-import { member } from "module-name";
-import { member as alias } from "module-name";
-import { member1 , member2 } from "module-name";
-import { member1 , member2 as alias2 , [...] } from "module-name";
-import defaultMember, { member [ , [...] ] } from "module-name";
-import defaultMember, * as name from "module-name";
-import "module-name";
+// import { member } from "module-name";
+// import { member as alias } from "module-name";
+// import { member1 , member2 } from "module-name";
+// import { member1 , member2 as alias2 , [...] } from "module-name";
+// import defaultMember, { member [ , [...] ] } from "module-name";
+// import defaultMember, * as name from "module-name";
+// import "module-name";
 
 /**
  * 模块加载机制
