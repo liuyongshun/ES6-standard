@@ -1,6 +1,7 @@
-
-import aa from './exports.js'
-aa()
+import { aa } from './exports.js';
+export {
+  aa
+};
 // import命令具有提升效果，会提升到整个模块的头部，首先执行。
 // foo();
 // import { foo } from 'my_module';
@@ -10,7 +11,6 @@ aa()
 
 // // 整体加载
 // import * as name from "module-name";
-
 
 // import { member } from "module-name";
 // import { member as alias } from "module-name";
@@ -35,8 +35,8 @@ aa()
  * 该对象的id属性是模块名，exports属性是模块输出的各个接口，loaded属性是一个布尔值，表
  * 示该模块的脚本是否执行完毕。其他还有很多属性，
  */
-{
-  id: '...',
-  exports: {},
-  loaded: true
-}
+// {
+//   id: '...',
+//   exports: {},
+//   loaded: true
+// }

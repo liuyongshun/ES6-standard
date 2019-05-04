@@ -3,10 +3,13 @@
 // import './ES6/literal';
 // import './ES6/string';
 // import './ES6/array';
-// import {firstName, lastName, year} from './ES6/exports';
-import aa from './ES6/exports';
+import { getUrlParam, trimSpace } from '../lib';
+console.log(getUrlParam, trimSpace);
+// import { aa } from './ES6/import.js';
+// aa();
+// import aa from './ES6/exports';
 // import './ES6/function';
-import './css/index.styl';
+// import './css/index.styl';
 // import './css/indexdd.css';
 // console.log(pub.numChunkScope);
 // console.log(pub.NUM_STABLE);
@@ -19,13 +22,13 @@ import './css/index.styl';
 // console.log(NUM_STABLE);
 // console.log(num);
 // console.log(1, 690);
-aa();
+// aa();
   // var zzz = '3333';
   // document.getElementById('result').appendChild(`<b>${zzz}</b>`);
 // console.log(firstName, lastName, year);
-function f (x, y = 1, ...arg) {
-  console.log(arguments.length);
-  return [x, y];
-}
+// function f (x, y = 1, ...arg) {
+//   console.log(arguments.length);
+//   return [x, y];
+// }
 
-console.log(f(2));
+// console.log(f(2));

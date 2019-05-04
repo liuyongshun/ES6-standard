@@ -1,8 +1,15 @@
-export default function aa () {
-  setTimeout(_ => {
-    console.log(333);
-  }, 5000);
+function aa () {
+  console.log(3333);
 }
+
+export {
+  aa
+};
+// export default function aa () {
+//   setTimeout(_ => {
+//     console.log(333);
+//   }, 5000);
+// }
 // method-1
 // export var year = 1958;
 // method-2
