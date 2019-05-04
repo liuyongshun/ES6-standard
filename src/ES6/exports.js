@@ -2,6 +2,8 @@ function aa() {
   console.log(3333);
 }
 
+var zz = 2;
+console.log(zz);
 export { aa };
 // export default function aa () {
 //   setTimeout(_ => {
