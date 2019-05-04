@@ -1,10 +1,8 @@
-function aa () {
+function aa() {
   console.log(3333);
 }
 
-export {
-  aa
-};
+export { aa };
 // export default function aa () {
 //   setTimeout(_ => {
 //     console.log(333);
