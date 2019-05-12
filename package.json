@@ -11,7 +11,11 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "src/**/*.js": "eslint"
+    "src/**/*.js": [
+      "eslint --fix --ext .js",
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "liu",
   "license": "ISC",
@@ -26,11 +30,13 @@
     "body-parser": "^1.17.2",
     "css-loader": "^0.28.2",
     "eslint": "^3.19.0",
+    "eslint-config-prettier": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-node": "^4.2.2",
+    "eslint-plugin-prettier": "^3.0.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "express": "^4.15.4",
@@ -42,6 +48,7 @@
     "lint-staged": "^8.1.6",
     "mongoose": "^4.11.9",
     "nodemon": "^1.11.0",
+    "prettier": "^1.17.0",
     "style-loader": "^0.18.2",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",

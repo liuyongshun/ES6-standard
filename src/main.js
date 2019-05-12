@@ -4,10 +4,12 @@
 // import './ES6/string';
 // import './ES6/array';
 import { getUrlParam, trimSpace } from '../lib';
-console.log(getUrlParam, trimSpace);
 // import { aa } from './ES6/import.js';
 // aa();
-// import aa from './ES6/exports';
+import aa from './ES6/exports';
+
+console.log(getUrlParam, trimSpace);
+console.log(aa);
 // import './ES6/function';
 // import './css/index.styl';
 // import './css/indexdd.css';
@@ -23,8 +25,8 @@ console.log(getUrlParam, trimSpace);
 // console.log(num);
 // console.log(1, 690);
 // aa();
-  // var zzz = '3333';
-  // document.getElementById('result').appendChild(`<b>${zzz}</b>`);
+// var zzz = '3333';
+// document.getElementById('result').appendChild(`<b>${zzz}</b>`);
 // console.log(firstName, lastName, year);
 // function f (x, y = 1, ...arg) {
 //   console.log(arguments.length);
