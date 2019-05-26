@@ -3,13 +3,12 @@
 // import './ES6/literal';
 // import './ES6/string';
 // import './ES6/array';
-import { getUrlParam, trimSpace } from '../lib';
+import { getUrlParam, trimSpace } from 'dev-public-tool';
 // import { aa } from './ES6/import.js';
 // aa();
-import aa from './ES6/exports';
-
+// import aa from './ES6/exports';
 console.log(getUrlParam, trimSpace);
-console.log(aa);
+// console.log(aa);
 // import './ES6/function';
 // import './css/index.styl';
 // import './css/indexdd.css';

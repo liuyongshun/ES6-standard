@@ -95,7 +95,7 @@ module.exports = {
       title: 'ddddddddddddddd',
       date: new Date()
     }),
-    new webpack.optimize.UglifyJsPlugin(),
+    // new webpack.optimize.UglifyJsPlugin(),
     new ExtractTextPlugin('./[name].css')  // The split 'CSS' will be added to 'index.css'
   ]
 };

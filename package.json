@@ -8,6 +8,7 @@
     "build": "webpack",
     "start": "webpack-dev-server --inline",
     "api": "node api/server.js",
+    "prepush": "lint-staged",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -29,6 +30,7 @@
     "babel-preset-es2015": "^6.24.1",
     "body-parser": "^1.17.2",
     "css-loader": "^0.28.2",
+    "dev-public-tool": "^1.0.2",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^4.2.0",
     "eslint-config-standard": "^10.2.1",
